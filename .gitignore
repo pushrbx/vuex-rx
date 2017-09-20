@@ -5,3 +5,4 @@ dist
 spec-js
 .nyc_output
 coverage
+.idea/
