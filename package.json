@@ -1,6 +1,6 @@
 {
-  "name": "vuex-rx",
-  "version": "0.0.3",
+  "name": "@pushrdx/vuex-rx",
+  "version": "0.1.0",
   "description": "RxJS middleware for vuex",
   "main": "index.js",
   "typings": "index.d.ts",
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:Brooooooklyn/vuex-observable.git"
+    "url": "git@github.com:pushrbx/vuex-rx.git"
   },
   "keywords": [
     "vue",

@@ -9,6 +9,7 @@ import { actionMutations } from './reduxLike'
 
 import { ActionsObservable } from './ActionObservable'
 import { EPIC_END } from './EPIC_END'
+import { Dispatcher } from './dispatcher'
 
 export type Epic<T, S> = (input$: ActionsObservable<T>, store?: Store<S>, dependencies?: any) => Observable<T>
 
@@ -38,7 +39,7 @@ export function createEpicMiddleware <T, S> (store: Store<S>) {
       new ActionsObservable(input$)
     )
 
-    const epic$ = new Subject<Epic<any, S>>()
+    const epic$ = new Dispatcher<S>()
 
     store.subscribe((mutation) => {
       input$.next(mutation)
